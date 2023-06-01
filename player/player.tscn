@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgw3dxqdy3rxe"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_nrrsx"]
+[ext_resource type="Texture2D" uid="uid://b72c0istvhtcl" path="res://assets/character/character.png" id="1_qy6j4"]
+[ext_resource type="FontVariation" uid="uid://d10lmr7c5x242" path="res://assets/font/NES.tres" id="3_n83qn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vrtex"]
+radius = 5.0
+height = 18.0
+
+[node name="player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_nrrsx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qy6j4")
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_vrtex")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+limit_right = 560
+limit_bottom = 304
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="InteractRay" type="RayCast2D" parent="Camera2D"]
+target_position = Vector2(0, 20)
+collision_mask = 4
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -17.0
+offset_right = 41.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("3_n83qn")
+theme_override_font_sizes/font_size = 14

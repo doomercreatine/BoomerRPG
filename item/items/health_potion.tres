@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemDataConsumable" load_steps=4 format=3 uid="uid://b4vj2ij1jn6ik"]
+
+[ext_resource type="Script" path="res://scripts/item_data_consumable.gd" id="1_r70xv"]
+[ext_resource type="Texture2D" uid="uid://cdy5pe6ri5088" path="res://assets/items/items.png" id="2_rmhdt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t248"]
+atlas = ExtResource("2_rmhdt")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_r70xv")
+heal_value = 5
+name = "Coffee"
+description = "Luke-warm microwaved cold brew."
+stackable = true
+texture = SubResource("AtlasTexture_8t248")

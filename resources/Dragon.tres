@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dyni6xglb4f5h"]
+
+[ext_resource type="Script" path="res://scripts/BaseEnemy.gd" id="1_qa2yv"]
+[ext_resource type="Texture2D" uid="uid://cib03txa5p3va" path="res://assets/enemy/pepw.png" id="2_56xm2"]
+
+[resource]
+script = ExtResource("1_qa2yv")
+name = "PEPW"
+texture = ExtResource("2_56xm2")
+health = 20
+damage = [1, 8]
+defense = 5
