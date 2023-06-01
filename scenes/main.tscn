@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://25bvf13ksj2d" path="res://test_inv.tres" id="5_2myrf"]
 [ext_resource type="Script" path="res://inventory/inventory_interface.gd" id="6_g78r6"]
 [ext_resource type="Script" path="res://inventory/inventory_data_equip.gd" id="6_gkse3"]
-[ext_resource type="PackedScene" path="res://scenes/hot_bar_inventory.tscn" id="9_3ar7f"]
+[ext_resource type="PackedScene" uid="uid://dc5a3kmf2minr" path="res://scenes/hot_bar_inventory.tscn" id="9_3ar7f"]
 [ext_resource type="PackedScene" path="res://inventory/slot.tscn" id="9_n1yka"]
 [ext_resource type="PackedScene" uid="uid://0dmfejlfg0sh" path="res://interactable/chest.tscn" id="9_y0c7m"]
 [ext_resource type="Script" path="res://inventory/inventory_data.gd" id="10_uj0q6"]

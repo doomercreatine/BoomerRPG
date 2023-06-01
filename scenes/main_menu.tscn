@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cnvrnl71swxjr"]
 
-[ext_resource type="FontFile" uid="uid://iuwd373wewg3" path="res://assets/font/Comfortaa-Bold.ttf" id="1_6vtx3"]
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_oe00q"]
+[ext_resource type="FontFile" uid="uid://dsmw4t8y5texf" path="res://assets/font/Comfortaa-Bold.ttf" id="1_6vtx3"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_oe00q"]
 [ext_resource type="Texture2D" uid="uid://i2lfpbynoh6a" path="res://assets/menu/label_continue.png" id="2_38dlv"]
 [ext_resource type="Texture2D" uid="uid://coluiygju7k21" path="res://assets/menu/label_new_game.png" id="3_ajeaw"]
 [ext_resource type="Texture2D" uid="uid://baua3ymijmwm0" path="res://assets/menu/label_options.png" id="4_mnnhm"]
