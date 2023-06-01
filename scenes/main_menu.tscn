@@ -1,19 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnvrnl71swxjr"]
+[gd_scene load_steps=5 format=3 uid="uid://cnvrnl71swxjr"]
 
 [ext_resource type="FontFile" uid="uid://dsmw4t8y5texf" path="res://assets/font/Comfortaa-Bold.ttf" id="1_6vtx3"]
 [ext_resource type="Script" path="res://main_menu.gd" id="1_oe00q"]
-[ext_resource type="Texture2D" uid="uid://i2lfpbynoh6a" path="res://assets/menu/label_continue.png" id="2_38dlv"]
-[ext_resource type="Texture2D" uid="uid://coluiygju7k21" path="res://assets/menu/label_new_game.png" id="3_ajeaw"]
-[ext_resource type="Texture2D" uid="uid://baua3ymijmwm0" path="res://assets/menu/label_options.png" id="4_mnnhm"]
 [ext_resource type="Texture2D" uid="uid://d3y7y7nwo0u8q" path="res://assets/menu/version.png" id="5_p0bp1"]
 [ext_resource type="Texture2D" uid="uid://dlas4kufv5v7b" path="res://assets/menu/doomerReallyMadv3.png" id="7_15e28"]
 
 [node name="MainMenu" type="MarginContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 634.0
+offset_bottom = 360.0
 script = ExtResource("1_oe00q")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -22,10 +16,10 @@ color = Color(0.113725, 0.113725, 0.113725, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-theme_override_constants/margin_left = 120
-theme_override_constants/margin_top = 80
-theme_override_constants/margin_right = 120
-theme_override_constants/margin_bottom = 80
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 40
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -37,7 +31,7 @@ size_flags_horizontal = 3
 [node name="Title" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("1_6vtx3")
-theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
 text = "[center][color=red]Chat
 'til you die[/color][/center]"
@@ -54,7 +48,7 @@ layout_mode = 2
 theme_override_colors/font_pressed_color = Color(0, 0, 0.490196, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0.490196, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0.490196, 1)
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 18
 text = "New Game"
 flat = true
 alignment = 0
@@ -64,33 +58,15 @@ layout_mode = 2
 theme_override_colors/font_pressed_color = Color(0, 0, 0.490196, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0.490196, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0.490196, 1)
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 18
 text = "Quit"
 flat = true
 alignment = 0
 
-[node name="Continue" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-visible = false
-layout_mode = 2
-mouse_filter = 0
-texture = ExtResource("2_38dlv")
-stretch_mode = 4
-
-[node name="New Game" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-visible = false
-layout_mode = 2
-texture = ExtResource("3_ajeaw")
-stretch_mode = 4
-
-[node name="Options" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-visible = false
-layout_mode = 2
-texture = ExtResource("4_mnnhm")
-stretch_mode = 4
-
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 18
 text = "Ver. 0.0.1
 Godot v4.0.3.stable.official 
 [5222a99f5]"
@@ -109,6 +85,7 @@ size_flags_horizontal = 3
 [node name="Characters" type="TextureRect" parent="MarginContainer/HBoxContainer/CenterContainer"]
 layout_mode = 2
 texture = ExtResource("7_15e28")
+stretch_mode = 5
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/NewGame" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/Quitgame" to="." method="_on_quitgame_pressed"]
